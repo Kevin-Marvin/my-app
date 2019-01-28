@@ -26,18 +26,18 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<repositories>
-    <repository>
-        <id>snapshotRepo</id>
-        <name>snapshot repo nexus</name>
-        <url>http://172.31.0.7:8081/repository/maven-snapshots/</url>
-    </repository>
+<distributionManagement>
     <repository>
         <id>deploymentRepo</id>
-        <name>deployment repo nexus</name>
+        <name>Release</name>
         <url>http://172.31.0.7:8081/repository/maven-releases/</url>
     </repository>
-</repositories>
+    <snapshotRepository>
+        <id>SnapshotRepo</id>
+        <name>Snapshot</name>
+        <url>http://172.31.0.7:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
